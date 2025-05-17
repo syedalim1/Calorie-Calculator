@@ -3,31 +3,180 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+  --foreground-rgb: 255, 255, 255;
+  --background-start-rgb: 0, 0, 0;
+  --background-end-rgb: 15, 15, 15;
+  --primary-color: 124, 58, 237; /* Vibrant purple */
+  --secondary-color: 236, 72, 153; /* Pink */
+  --accent-color: 249, 168, 37; /* Orange */
+  --success-color: 16, 185, 129; /* Emerald */
+  --info-color: 14, 165, 233; /* Sky blue */
+  --warning-color: 234, 179, 8; /* Yellow */
+  --error-color: 239, 68, 68; /* Red */
+  --gradient-1: linear-gradient(
+    135deg,
+    rgb(var(--primary-color)),
+    rgb(var(--secondary-color))
+  );
+  --gradient-2: linear-gradient(
+    135deg,
+    rgb(var(--info-color)),
+    rgb(var(--primary-color))
+  );
+  --gradient-3: linear-gradient(
+    135deg,
+    rgb(var(--success-color)),
+    rgb(var(--info-color))
+  );
+  --gradient-4: linear-gradient(
+    135deg,
+    rgb(var(--accent-color)),
+    rgb(var(--warning-color))
+  );
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
   background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+    135deg,
+    rgb(var(--background-start-rgb)),
+    rgb(var(--background-end-rgb))
+  );
+  min-height: 100vh;
+  color: rgb(var(--foreground-rgb));
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
+
+  .text-gradient {
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-image: var(--gradient-1);
+  }
+
+  .text-gradient-2 {
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-image: var(--gradient-2);
+  }
+
+  .text-gradient-3 {
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-image: var(--gradient-3);
+  }
+
+  .text-gradient-4 {
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-image: var(--gradient-4);
+  }
+
+  .card-gradient {
+    background: linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.12),
+      rgba(255, 255, 255, 0.06)
+    );
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+  }
+
+  .card-gradient-alt {
+    background: linear-gradient(
+      135deg,
+      rgba(124, 58, 237, 0.08),
+      rgba(236, 72, 153, 0.08)
+    );
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+  }
+
+  .glass-effect {
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(8px);
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  /* Animation delay classes */
+  .animation-delay-1000 {
+    animation-delay: 1000ms;
+  }
+
+  .animation-delay-1500 {
+    animation-delay: 1500ms;
+  }
+
+  .animation-delay-2000 {
+    animation-delay: 2000ms;
+  }
+
+  .animation-delay-3000 {
+    animation-delay: 3000ms;
+  }
+
+  .animation-delay-4000 {
+    animation-delay: 4000ms;
+  }
+}
+
+.btn-primary {
+  background: var(--gradient-1);
+  border: none;
+  color: white;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 14px rgba(var(--primary-color), 0.4);
+}
+
+.btn-primary:hover {
+  box-shadow: 0 6px 20px rgba(var(--primary-color), 0.6);
+  transform: translateY(-3px);
+}
+
+.btn-secondary {
+  background: var(--gradient-2);
+  border: none;
+  color: white;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 14px rgba(var(--info-color), 0.4);
+}
+
+.btn-secondary:hover {
+  box-shadow: 0 6px 20px rgba(var(--info-color), 0.6);
+  transform: translateY(-3px);
+}
+
+.tab-active {
+  background: var(--gradient-1);
+  color: white !important;
+  box-shadow: 0 4px 10px rgba(var(--primary-color), 0.4);
+}
+
+.glow-effect {
+  box-shadow: 0 0 15px rgba(var(--primary-color), 0.6);
+}
+
+.glow-effect-success {
+  box-shadow: 0 0 15px rgba(var(--success-color), 0.6);
+}
+
+.glow-effect-info {
+  box-shadow: 0 0 15px rgba(var(--info-color), 0.6);
+}
+
+.glow-effect-warning {
+  box-shadow: 0 0 15px rgba(var(--warning-color), 0.6);
+}
+
+.glow-effect-error {
+  box-shadow: 0 0 15px rgba(var(--error-color), 0.6);
 }
