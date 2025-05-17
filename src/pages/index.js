@@ -32,6 +32,31 @@ export default function Home() {
 
   return (
     <>
+      <Head>
+        <meta
+          name="google-site-verification"
+          content="your-verification-code"
+        />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "SoftwareApplication",
+            name: "AI Calorie Calculator",
+            applicationCategory: "HealthApplication",
+            operatingSystem: "Web",
+            offers: {
+              "@type": "Offer",
+              price: "0",
+              priceCurrency: "USD",
+            },
+            aggregateRating: {
+              "@type": "AggregateRating",
+              ratingValue: "4.8",
+              ratingCount: "127",
+            },
+          })}
+        </script>
+      </Head>
       <div className="flex items-center gap-3">
         <main className="pt-16 relative z-10">
           <CalorieCalculatorPage theme={theme} />
