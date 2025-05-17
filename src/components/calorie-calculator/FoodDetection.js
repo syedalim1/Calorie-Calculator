@@ -612,97 +612,10 @@ const FoodDetection = ({
                 </div>
               )}
 
-            <div className="mt-6">
-              <button
-                onClick={onRecommend}
-                className="btn btn-sm w-full border-none bg-gradient-to-r from-amber-500 to-orange-500 hover:shadow-lg hover:shadow-amber-500/30 text-white hover:-translate-y-1 transition-all duration-300 rounded-lg py-3"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="h-4 w-4 mr-2"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"
-                  />
-                </svg>
-                Get Detailed Recommendations
-              </button>
-            </div>
+           
           </div>
         )}
 
-        <div className="flex flex-wrap justify-center gap-3 mt-6">
-          <button
-            onClick={onShare}
-            className="btn btn-sm border-none bg-gradient-to-r from-blue-500 to-sky-500 hover:shadow-lg hover:shadow-blue-500/30 text-white hover:-translate-y-1 transition-all duration-300 animate-bounceIn rounded-lg relative overflow-hidden group"
-            style={{ animationDelay: "1.3s" }}
-          >
-            <span className="absolute inset-0 w-full h-full bg-white/10 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></span>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="h-4 w-4 mr-1 relative z-10"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z"
-              />
-            </svg>
-            <span className="relative z-10">Share</span>
-          </button>
-          <button
-            onClick={onPrint}
-            className="btn btn-sm border border-white/20 bg-white/10 hover:bg-white/20 text-white hover:-translate-y-1 transition-all duration-300 animate-bounceIn rounded-lg"
-            style={{ animationDelay: "1.4s" }}
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="h-4 w-4 mr-1"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z"
-              />
-            </svg>
-            Print
-          </button>
-          <button
-            onClick={onClear}
-            className="btn btn-sm border-none bg-gradient-to-r from-rose-500 to-red-500 hover:shadow-lg hover:shadow-rose-500/30 text-white hover:-translate-y-1 transition-all duration-300 animate-bounceIn rounded-lg"
-            style={{ animationDelay: "1.5s" }}
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="h-4 w-4 mr-1"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M6 18L18 6M6 6l12 12"
-              />
-            </svg>
-            Clear
-          </button>
-        </div>
       </div>
     </div>
   );
