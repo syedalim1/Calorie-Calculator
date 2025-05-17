@@ -90,8 +90,7 @@ export const Header = () => {
       <header className="flex items-center justify-center bg-gradient-to-r from-violet-900/90 via-indigo-900/90 to-purple-900/90 backdrop-blur-lg shadow-lg shadow-violet-500/10 transition-all duration-300">
         <div className="items-center p-4">
           {/* Logo Section */}
-          <div className="flex items-center space-x-2">
-           
+          <div className="flex items-center space-x-2">          
             <div>
               <span className="text-xl font-bold bg-gradient-to-r from-violet-300 via-fuchsia-200 to-cyan-200 bg-clip-text text-transparent drop-shadow-sm transition-transform duration-300 hover:scale-105">
                 Calorie Calculator

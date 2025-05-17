@@ -57,10 +57,8 @@ export default function Home() {
           })}
         </script>
       </Head>
-      <div className="flex items-center gap-3">
-        <main className="pt-16 relative z-10">
-          <CalorieCalculatorPage theme={theme} />
-        </main>
+      <div className="flex  gap-3">
+        <CalorieCalculatorPage theme={theme} />
       </div>
     </>
   );

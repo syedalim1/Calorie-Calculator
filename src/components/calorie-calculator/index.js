@@ -261,7 +261,7 @@ export const CalorieCalculatorPage = () => {
   });
 
   return (
-    <div className="flex flex-col w-full items-center justify-center min-h-screen p-2 md:p-4   overflow-hidden">
+    <div className="flex flex-col w-full items-center  min-h-screen p-2 md:p-4   overflow-hidden">
       <DecorativeShapes />
       {/* <Confetti show={showConfetti} /> */}
       <AnalysisProgress stage={analysisStage} />
